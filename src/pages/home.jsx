@@ -425,6 +425,12 @@ export default function Home(props) {
       description: `${productName} ${currentLang === 'zh' ? '已选择' : 'selected'}`
     });
   };
+  // 处理预约技术演示按钮点击
+  const handleScheduleDemo = () => {
+    const subject = encodeURIComponent(currentLang === 'zh' ? 'ECOSYN技术演示预约' : 'ECOSYN Technical Demo Request');
+    const body = encodeURIComponent(currentLang === 'zh' ? '请描述您的运营场景、设备需求或者其他可以帮助我们判断您需求的信息' : 'Please describe your operating scenarios, equipment requirements, or other information that can help us understand your needs');
+    window.location.href = `mailto:sales@hill-sea.com?subject=${subject}&body=${body}`;
+  };
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'coreValues', 'technology', 'specifications', 'applications', 'journey', 'roi', 'cta'];
@@ -486,7 +492,7 @@ export default function Home(props) {
               {t.hero.cta1}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" className="border-2 border-[#0D7E9C] text-[#0D7E9C] px-8 py-4 rounded-lg font-semibold hover:bg-[#0D7E9C] hover:text-white transition-all duration-300">
+            <Button variant="outline" onClick={handleScheduleDemo} className="border-2 border-[#0D7E9C] text-[#0D7E9C] px-8 py-4 rounded-lg font-semibold hover:bg-[#0D7E9C] hover:text-white transition-all duration-300">
               {t.hero.cta2}
             </Button>
           </div>
