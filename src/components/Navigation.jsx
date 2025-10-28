@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // @ts-ignore;
 import { Button } from '@/components/ui';
 // @ts-ignore;
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 
 export function Navigation({
   currentPage = 'home',
@@ -13,29 +13,22 @@ export function Navigation({
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
-  // 导航菜单配置
+  // 更新导航菜单配置
   const navigationItems = [{
-    id: 'home',
-    label: currentLang === 'zh' ? '首页' : 'Home',
+    id: 'ecosyn',
+    label: currentLang === 'zh' ? 'ECOSYN' : 'ECOSYN',
     href: '#hero'
   }, {
-    id: 'coreValues',
-    label: currentLang === 'zh' ? '核心优势' : 'Core Advantages',
-    href: '#coreValues'
+    id: 'solutions',
+    label: currentLang === 'zh' ? '解决方案' : 'Solutions',
+    href: '/solutions',
+    isExternal: true
   }, {
-    id: 'technology',
-    label: currentLang === 'zh' ? '技术架构' : 'Technology',
-    href: '#technology'
-  }, {
-    id: 'specifications',
-    label: currentLang === 'zh' ? '产品规格' : 'Specifications',
-    href: '#specifications'
-  }, {
-    id: 'applications',
-    label: currentLang === 'zh' ? '应用场景' : 'Applications',
-    href: '#applications'
+    id: 'services',
+    label: currentLang === 'zh' ? '服务' : 'Services',
+    href: '/services',
+    isExternal: true
   }, {
     id: 'about',
     label: currentLang === 'zh' ? '关于我们' : 'About Us',
@@ -71,7 +64,6 @@ export function Navigation({
   const handleLanguageToggle = () => {
     const newLang = currentLang === 'zh' ? 'en' : 'zh';
     onLanguageChange?.(newLang);
-    setMobileDropdownOpen(false);
   };
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/80 backdrop-blur-sm'}`}>
       {/* Desktop Navigation */}
@@ -91,13 +83,10 @@ export function Navigation({
               </button>)}
           </div>
 
-          {/* Desktop Language Toggle - 简化为直接切换按钮 */}
+          {/* Desktop Language Toggle - 更简洁的设计 */}
           <div className="hidden md:flex items-center">
-            <button onClick={handleLanguageToggle} className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
-              <Globe className="w-4 h-4" />
-              <span className="font-medium text-sm">
-                {currentLang === 'zh' ? 'EN' : '中文'}
-              </span>
+            <button onClick={handleLanguageToggle} className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
+              <Globe className="w-5 h-5" />
             </button>
           </div>
 
@@ -116,12 +105,12 @@ export function Navigation({
                   {item.label}
                 </button>)}
               
-              {/* Mobile Language Toggle - 简化为直接切换按钮 */}
+              {/* Mobile Language Toggle - 更简洁的设计 */}
               <div className="px-3 py-2 border-t border-gray-200 mt-2 pt-4">
-                <button onClick={handleLanguageToggle} className="flex items-center space-x-2 w-full px-4 py-3 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
-                  <Globe className="w-4 h-4" />
+                <button onClick={handleLanguageToggle} className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
+                  <Globe className="w-5 h-5" />
                   <span className="font-medium">
-                    {currentLang === 'zh' ? '切换到英文' : 'Switch to Chinese'}
+                    {currentLang === 'zh' ? 'English' : '中文'}
                   </span>
                 </button>
               </div>
