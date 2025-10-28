@@ -18,7 +18,8 @@ export function Navigation({
   const navigationItems = [{
     id: 'home',
     label: currentLang === 'zh' ? 'ECOSYN' : 'ECOSYN',
-    href: '/home'
+    href: '/home',
+    isExternal: true
   }, {
     id: 'solutions',
     label: currentLang === 'zh' ? '解决方案' : 'Solutions',
@@ -47,7 +48,7 @@ export function Navigation({
 
   // 处理导航点击
   const handleNavClick = item => {
-    if (item.isExternal || item.id === 'home') {
+    if (item.isExternal) {
       onNavigate?.(item.id);
     } else {
       const element = document.querySelector(item.href);
@@ -83,19 +84,14 @@ export function Navigation({
               </button>)}
           </div>
 
-          {/* Desktop Language Toggle - 简洁但直观的中英文标识 */}
+          {/* Desktop Language Toggle - 简洁但能直观看出中英文标识 */}
           <div className="hidden md:flex items-center">
-            <button onClick={handleLanguageToggle} className="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
-              <Globe className="w-4 h-4" />
-              <div className="flex items-center space-x-1">
-                <span className={`text-xs font-medium ${currentLang === 'zh' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
-                  中
-                </span>
-                <span className="text-gray-300">|</span>
-                <span className={`text-xs font-medium ${currentLang === 'en' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
-                  EN
-                </span>
-              </div>
+            <button onClick={handleLanguageToggle} className="relative w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40 group">
+              <Globe className="w-5 h-5" />
+              {/* 语言标识 - 显示当前语言 */}
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-gradient-to-r from-[#0D7E9C] to-[#01847E] text-white text-xs font-bold flex items-center justify-center shadow-md">
+                {currentLang === 'zh' ? '中' : 'EN'}
+              </span>
             </button>
           </div>
 
@@ -114,19 +110,17 @@ export function Navigation({
                   {item.label}
                 </button>)}
               
-              {/* Mobile Language Toggle - 简洁但直观的中英文标识 */}
+              {/* Mobile Language Toggle - 简洁但能直观看出中英文标识 */}
               <div className="px-3 py-2 border-t border-gray-200 mt-2 pt-4">
-                <button onClick={handleLanguageToggle} className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
+                <button onClick={handleLanguageToggle} className="relative flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
                   <Globe className="w-5 h-5" />
-                  <div className="flex items-center space-x-2">
-                    <span className={`text-sm font-medium ${currentLang === 'zh' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
-                      中文
-                    </span>
-                    <span className="text-gray-300">|</span>
-                    <span className={`text-sm font-medium ${currentLang === 'en' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
-                      English
-                    </span>
-                  </div>
+                  <span className="font-medium">
+                    {currentLang === 'zh' ? '切换到 English' : 'Switch to 中文'}
+                  </span>
+                  {/* 语言标识 */}
+                  <span className="ml-auto w-6 h-6 rounded-full bg-gradient-to-r from-[#0D7E9C] to-[#01847E] text-white text-xs font-bold flex items-center justify-center">
+                    {currentLang === 'zh' ? '中' : 'EN'}
+                  </span>
                 </button>
               </div>
             </div>
