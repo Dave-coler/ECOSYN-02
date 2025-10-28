@@ -70,7 +70,8 @@ export default function About(props) {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0D7E9C]/10 to-[#01847E]/10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          {/* 增加主标题的段前间距 */}
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 pt-16 md:pt-24 lg:pt-32">
             {t.hero.title}
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
