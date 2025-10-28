@@ -21,7 +21,7 @@ export default function Solutions(props) {
       hero: {
         title: '智能解决方案',
         subtitle: '为高能耗场景提供定制化的新能源解决方案',
-        description: '基于先进的电驱动技术和智能控制系统，我们为公路运输、能源配送等场景提供高效、可靠的新能源解决方案。'
+        description: '基于先进的电驱动技术、高安全高能量密度的动力电池、智能控制系统，以及大功率MW超充技术，我们为公路运输、港口设备、矿山设备、能源配送等场景提供高效可靠的新能源解决方案。'
       },
       solutions: [{
         id: 'ecosyn',
@@ -111,7 +111,7 @@ export default function Solutions(props) {
       hero: {
         title: 'Intelligent Solutions',
         subtitle: 'Customized new energy solutions for high-consumption scenarios',
-        description: 'Based on advanced electric drive technology and intelligent control systems, we provide efficient and reliable new energy solutions for road transport, energy distribution and other scenarios.'
+        description: 'Based on advanced electric drive technology, high-safety high-energy-density power batteries, intelligent control systems, and high-power MW ultra-fast charging technology, we provide efficient and reliable new energy solutions for road transport, port equipment, mining equipment, and energy distribution scenarios.'
       },
       solutions: [{
         id: 'ecosyn',
