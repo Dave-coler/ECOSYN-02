@@ -94,22 +94,28 @@ export function CoreValuesSection({
                           <BarChart3 className="w-4 h-4 text-[#0D7E9C]" />
                         </div>
                         <div className="flex items-end space-x-2 h-20">
-                          <div className="flex-1 bg-gradient-to-t from-red-400 to-red-300 rounded-t relative overflow-hidden group" style={{
+                          <div className="flex-1 bg-gradient-to-t from-[#852E01] to-[#852E01]/80 rounded-t relative overflow-hidden group" style={{
                       height: '100%'
                     }}>
-                            <div className="absolute inset-0 bg-gradient-to-t from-red-500/20 to-transparent" />
-                            <div className="text-center text-xs font-bold text-red-700 pt-1 relative z-10">{advantage.chartData.before}%</div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#852E01]/20 to-transparent" />
+                            {/* 隐藏百分比数值 */}
+                            <div className="text-center text-xs font-bold text-white pt-1 relative z-10 opacity-0">
+                              {advantage.chartData.before}%
+                            </div>
                           </div>
-                          <div className="flex-1 bg-gradient-to-t from-green-400 to-green-300 rounded-t relative overflow-hidden group" style={{
+                          <div className="flex-1 bg-gradient-to-t from-[#01847E] to-[#01847E]/80 rounded-t relative overflow-hidden group" style={{
                       height: '20%'
                     }}>
-                            <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent" />
-                            <div className="text-center text-xs font-bold text-green-700 pt-1 relative z-10">{advantage.chartData.after}%</div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#01847E]/20 to-transparent" />
+                            {/* 隐藏百分比数值 */}
+                            <div className="text-center text-xs font-bold text-white pt-1 relative z-10 opacity-0">
+                              {advantage.chartData.after}%
+                            </div>
                           </div>
                         </div>
                         <div className="flex justify-between mt-2 text-xs text-gray-500">
-                          <span>使用前</span>
-                          <span>使用后</span>
+                          <span>{currentLang === 'zh' ? '使用前' : 'Before'}</span>
+                          <span>{currentLang === 'zh' ? '使用后' : 'After'}</span>
                         </div>
                       </div>}
 
@@ -223,22 +229,28 @@ export function CoreValuesSection({
                             <BarChart3 className="w-3 h-3 text-[#0D7E9C]" />
                           </div>
                           <div className="flex items-end space-x-1 h-16">
-                            <div className="flex-1 bg-gradient-to-t from-red-400 to-red-300 rounded-t relative overflow-hidden group" style={{
+                            <div className="flex-1 bg-gradient-to-t from-[#852E01] to-[#852E01]/80 rounded-t relative overflow-hidden group" style={{
                         height: '100%'
                       }}>
-                              <div className="absolute inset-0 bg-gradient-to-t from-red-500/20 to-transparent" />
-                              <div className="text-center text-xs font-bold text-red-700 pt-1 relative z-10">{advantage.chartData.before}%</div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#852E01]/20 to-transparent" />
+                              {/* 隐藏百分比数值 */}
+                              <div className="text-center text-xs font-bold text-white pt-1 relative z-10 opacity-0">
+                                {advantage.chartData.before}%
+                              </div>
                             </div>
-                            <div className="flex-1 bg-gradient-to-t from-green-400 to-green-300 rounded-t relative overflow-hidden group" style={{
+                            <div className="flex-1 bg-gradient-to-t from-[#01847E] to-[#01847E]/80 rounded-t relative overflow-hidden group" style={{
                         height: '20%'
                       }}>
-                              <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent" />
-                              <div className="text-center text-xs font-bold text-green-700 pt-1 relative z-10">{advantage.chartData.after}%</div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#01847E]/20 to-transparent" />
+                              {/* 隐藏百分比数值 */}
+                              <div className="text-center text-xs font-bold text-white pt-1 relative z-10 opacity-0">
+                                {advantage.chartData.after}%
+                              </div>
                             </div>
                           </div>
                           <div className="flex justify-between mt-1 text-xs text-gray-500">
-                            <span>使用前</span>
-                            <span>使用后</span>
+                            <span>{currentLang === 'zh' ? '使用前' : 'Before'}</span>
+                            <span>{currentLang === 'zh' ? '使用后' : 'After'}</span>
                           </div>
                         </div>}
 
