@@ -25,13 +25,13 @@ export function TeamSection({
       }, {
         name: '李刚',
         position: '首席顾问',
-        description: '上海财经大学 硕士，15+以上产业投融资经验，5+新能源开发和运营经验。曾任远东宏信、平安国际融资租赁担任高管，利程融资租赁总经理，某国有能源基金投资高级总监，具有丰富的企业管理经验和新能源产业及金融资源。',
+        description: '上海财经大学 硕士，15+年产业投融资经验，曾任远东宏信、平安国际融资租赁高管，精通新能源项目金融结构与资本运作。',
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
         expertise: ['商业模型', '资产运营', '资产证券化']
       }, {
         name: '董悦航',
         position: 'CTO',
-        description: '上海交通大学机械与动力工程学院博士，15+年以上新能源整车、动力系统、电控系统研发、管理经验。曾任吉利汽车动力集成开发部新能源总工，哈弗汽车新能源系统集成主任工程师，麦格纳斯太尔系统主管工程师、上汽商用车新能源开发主管。',
+        description: '上海交通大学机械与动力工程学院博士，20+年整车与动力系统研发经验，曾任吉利汽车动力集成开发部新能源总工，也曾就职于哈弗汽车、麦格纳斯太尔上汽商用车等。',
         avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
         expertise: ['产品开发', '技术创新', '团队建设', '电驱技术', '储能技术']
       }, {
@@ -80,13 +80,13 @@ export function TeamSection({
       }, {
         name: 'Li Gang',
         position: 'Chief Advisor',
-        description: 'Master from Shanghai University of Finance and Economics, 15+ years of industrial investment and financing experience, 5+ years of new energy development and operation experience. Previously served as executive at Far East Horizons, Ping An International Financial Leasing, General Manager of Licheng Financial Leasing, Senior Investment Director of a state-owned energy fund.',
+        description: 'Master from Shanghai University of Finance and Economics, 15+ years of industrial investment and financing experience, previously served as executive at Far East Horizons, Ping An International Financial Leasing, proficient in new energy project financial structure and capital operation.',
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
         expertise: ['Business Model', 'Asset Operation', 'Asset Securitization']
       }, {
         name: 'Dong Yuehang',
         position: 'CTO',
-        description: 'PhD from School of Mechanical and Power Engineering, Shanghai Jiao Tong University, 15+ years of R&D and management experience in new energy vehicles, power systems, and electronic control systems. Previously served as New Energy Chief Engineer at Geely Automotive Power Integration Development Department, New Energy System Integration Senior Engineer at Haval Automotive.',
+        description: 'PhD from School of Mechanical and Power Engineering, Shanghai Jiao Tong University, 20+ years of R&D experience in vehicles and power systems, previously served as New Energy Chief Engineer at Geely Automotive Power Integration Development Department, also worked at Haval Automotive, Magna Steyr SAIC Commercial Vehicles.',
         avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
         expertise: ['Product Development', 'Technical Innovation', 'Team Building', 'Electric Drive Technology', 'Energy Storage Technology']
       }, {
