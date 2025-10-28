@@ -91,9 +91,9 @@ export function CTASection({
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t.title}</h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">{t.subtitle}</p>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-6">{t.subtitle}</p>
           
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -108,7 +108,7 @@ export function CTASection({
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
           {t.features.map((feature, index) => {
           const IconComponent = getIcon(feature.icon);
           return <div key={index} className="text-center">
