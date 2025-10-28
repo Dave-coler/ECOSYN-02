@@ -15,25 +15,31 @@ export function TeamSection({
         position: '创始人 & CEO',
         description: '拥有10+年新能源行业经验，专注于电驱动系统和储能技术的研发与创新。曾担任航天氢能总工程师&产品总监、博雷顿 (01333.HK)联合创始人&技术副总裁等。',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
-        expertise: ['电驱动系统', '储能技术', '产品研发', '技术创新']
+        expertise: ['战略规划', '技术创新', '团队管理', '商业模式']
       }, {
-        name: '李明',
-        position: '联合创始人 & CTO',
-        description: '专注于智能控制系统和AI算法研发，拥有丰富的工业自动化经验。曾在多家知名新能源企业担任技术负责人。',
+        name: '杨林',
+        position: '教授 首席科学家',
+        description: '上海交通大学汽车电子技术研究所所长、徐工集团独立董事、中国能源学会常务理事、中国自动化学会车辆控制与智能化专委会委员。',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+        expertise: ['智能控制', 'AI算法']
+      }, {
+        name: '李刚',
+        position: '首席顾问',
+        description: '上海财经大学 硕士，15+以上产业投融资经验，5+新能源开发和运营经验。曾任远东宏信、平安国际融资租赁担任高管，利程融资租赁总经理，某国有能源基金投资高级总监，具有丰富的企业管理经验和新能源产业及金融资源。',
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-        expertise: ['智能控制', 'AI算法', '工业自动化', '系统集成']
+        expertise: ['商业模型', '资产运营', '资产证券化']
       }, {
-        name: '王芳',
-        position: '联合创始人 & COO',
-        description: '在新能源项目运营和管理方面拥有丰富经验，擅长大型项目的落地实施和团队管理。',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face',
-        expertise: ['项目管理', '运营管理', '团队建设', '业务拓展']
-      }, {
-        name: '张强',
-        position: '研发总监',
-        description: '专注于电池技术和储能系统研发，拥有多项技术专利和丰富的产品开发经验。',
+        name: '董悦航',
+        position: 'CTO',
+        description: '上海交通大学机械与动力工程学院博士，15+年以上新能源整车、动力系统、电控系统研发、管理经验。曾任吉利汽车动力集成开发部新能源总工，哈弗汽车新能源系统集成主任工程师，麦格纳斯太尔系统主管工程师、上汽商用车新能源开发主管。',
         avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
-        expertise: ['电池技术', '储能系统', '产品开发', '技术创新']
+        expertise: ['产品开发', '技术创新', '团队建设', '电驱技术', '储能技术']
+      }, {
+        name: '蓝天',
+        position: 'CFO',
+        description: '澳洲迪肯大学硕士，10+年券商投行、美元基金，私募股权基金及外企财务经验。曾担任海德投资（HK）联合创始人，历任光大证券业务发展部经理，知名私募基金风控总监。',
+        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face',
+        expertise: ['财务模型', '风控', '融资']
       }],
       values: {
         title: '团队价值观',
@@ -64,25 +70,31 @@ export function TeamSection({
         position: 'Founder & CEO',
         description: 'With 10+ years of experience in the new energy industry, focusing on R&D and innovation of electric drive systems and energy storage technology. Previously served as Chief Engineer & Product Director at Aerospace Hydrogen Energy, Co-founder & Technical Vice President at Boretton (01333.HK).',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
-        expertise: ['Electric Drive Systems', 'Energy Storage Technology', 'Product R&D', 'Technical Innovation']
+        expertise: ['Strategic Planning', 'Technical Innovation', 'Team Management', 'Business Model']
       }, {
-        name: 'Li Ming',
-        position: 'Co-founder & CTO',
-        description: 'Focusing on intelligent control systems and AI algorithm R&D, with rich experience in industrial automation. Previously served as technical lead in several well-known new energy companies.',
+        name: 'Yang Lin',
+        position: 'Professor Chief Scientist',
+        description: 'Director of Automotive Electronics Technology Research Institute at Shanghai Jiao Tong University, Independent Director of XCMG Group, Executive Director of China Energy Society, Committee Member of Vehicle Control and Intelligence Committee of China Automation Society.',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+        expertise: ['Intelligent Control', 'AI Algorithms']
+      }, {
+        name: 'Li Gang',
+        position: 'Chief Advisor',
+        description: 'Master from Shanghai University of Finance and Economics, 15+ years of industrial investment and financing experience, 5+ years of new energy development and operation experience. Previously served as executive at Far East Horizons, Ping An International Financial Leasing, General Manager of Licheng Financial Leasing, Senior Investment Director of a state-owned energy fund.',
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-        expertise: ['Intelligent Control', 'AI Algorithms', 'Industrial Automation', 'System Integration']
+        expertise: ['Business Model', 'Asset Operation', 'Asset Securitization']
       }, {
-        name: 'Wang Fang',
-        position: 'Co-founder & COO',
-        description: 'Rich experience in new energy project operation and management, skilled in large-scale project implementation and team management.',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face',
-        expertise: ['Project Management', 'Operations Management', 'Team Building', 'Business Development']
-      }, {
-        name: 'Zhang Qiang',
-        position: 'R&D Director',
-        description: 'Focusing on battery technology and energy storage system R&D, with multiple technical patents and rich product development experience.',
+        name: 'Dong Yuehang',
+        position: 'CTO',
+        description: 'PhD from School of Mechanical and Power Engineering, Shanghai Jiao Tong University, 15+ years of R&D and management experience in new energy vehicles, power systems, and electronic control systems. Previously served as New Energy Chief Engineer at Geely Automotive Power Integration Development Department, New Energy System Integration Senior Engineer at Haval Automotive.',
         avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
-        expertise: ['Battery Technology', 'Energy Storage Systems', 'Product Development', 'Technical Innovation']
+        expertise: ['Product Development', 'Technical Innovation', 'Team Building', 'Electric Drive Technology', 'Energy Storage Technology']
+      }, {
+        name: 'Lan Tian',
+        position: 'CFO',
+        description: 'Master from Deakin University, Australia, 10+ years of experience in securities investment banking, US dollar funds, private equity funds and foreign enterprise finance. Previously served as co-founder of Haide Investment (HK), Business Development Manager at China Everbright Securities, Risk Control Director at a well-known private equity fund.',
+        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face',
+        expertise: ['Financial Model', 'Risk Control', 'Financing']
       }],
       values: {
         title: 'Team Values',
@@ -130,24 +142,24 @@ export function TeamSection({
         </div>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-20">
           {t.members.map((member, index) => <div key={index} className="group">
-              <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+              <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 h-full">
                 {/* Member Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
                 
                 {/* Member Info */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-sm font-semibold text-[#0D7E9C] mb-3">{member.position}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{member.description}</p>
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-xs font-semibold text-[#0D7E9C] mb-3 leading-tight">{member.position}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed mb-4 line-clamp-4">{member.description}</p>
                   
                   {/* Expertise Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {member.expertise.map((skill, skillIndex) => <span key={skillIndex} className="px-3 py-1 bg-[#0D7E9C]/10 text-[#0D7E9C] text-xs rounded-full font-medium">
+                  <div className="flex flex-wrap gap-1">
+                    {member.expertise.map((skill, skillIndex) => <span key={skillIndex} className="px-2 py-1 bg-[#0D7E9C]/10 text-[#0D7E9C] text-xs rounded-full font-medium">
                         {skill}
                       </span>)}
                   </div>
