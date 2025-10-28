@@ -25,7 +25,8 @@ export function HeroSection({
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+        {/* 增加主标题的段前间距 */}
+        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight pt-16 md:pt-24 lg:pt-32">
           {t.hero.title}
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto">
