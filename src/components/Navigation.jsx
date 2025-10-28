@@ -14,11 +14,11 @@ export function Navigation({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // 更新导航菜单配置
+  // 更新导航菜单配置 - ECOSYN链接到home页面
   const navigationItems = [{
-    id: 'ecosyn',
+    id: 'home',
     label: currentLang === 'zh' ? 'ECOSYN' : 'ECOSYN',
-    href: '#hero'
+    href: '/home'
   }, {
     id: 'solutions',
     label: currentLang === 'zh' ? '解决方案' : 'Solutions',
@@ -47,7 +47,7 @@ export function Navigation({
 
   // 处理导航点击
   const handleNavClick = item => {
-    if (item.isExternal) {
+    if (item.isExternal || item.id === 'home') {
       onNavigate?.(item.id);
     } else {
       const element = document.querySelector(item.href);
@@ -83,10 +83,19 @@ export function Navigation({
               </button>)}
           </div>
 
-          {/* Desktop Language Toggle - 更简洁的设计 */}
+          {/* Desktop Language Toggle - 简洁但直观的中英文标识 */}
           <div className="hidden md:flex items-center">
-            <button onClick={handleLanguageToggle} className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
-              <Globe className="w-5 h-5" />
+            <button onClick={handleLanguageToggle} className="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
+              <Globe className="w-4 h-4" />
+              <div className="flex items-center space-x-1">
+                <span className={`text-xs font-medium ${currentLang === 'zh' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
+                  中
+                </span>
+                <span className="text-gray-300">|</span>
+                <span className={`text-xs font-medium ${currentLang === 'en' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
+                  EN
+                </span>
+              </div>
             </button>
           </div>
 
@@ -105,13 +114,19 @@ export function Navigation({
                   {item.label}
                 </button>)}
               
-              {/* Mobile Language Toggle - 更简洁的设计 */}
+              {/* Mobile Language Toggle - 简洁但直观的中英文标识 */}
               <div className="px-3 py-2 border-t border-gray-200 mt-2 pt-4">
                 <button onClick={handleLanguageToggle} className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-[#0D7E9C]/10 to-[#01847E]/10 hover:from-[#0D7E9C]/20 hover:to-[#01847E]/20 text-[#0D7E9C] rounded-lg transition-all duration-300 border border-[#0D7E9C]/20 hover:border-[#0D7E9C]/40">
                   <Globe className="w-5 h-5" />
-                  <span className="font-medium">
-                    {currentLang === 'zh' ? 'English' : '中文'}
-                  </span>
+                  <div className="flex items-center space-x-2">
+                    <span className={`text-sm font-medium ${currentLang === 'zh' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
+                      中文
+                    </span>
+                    <span className="text-gray-300">|</span>
+                    <span className={`text-sm font-medium ${currentLang === 'en' ? 'text-[#0D7E9C]' : 'text-gray-400'}`}>
+                      English
+                    </span>
+                  </div>
                 </button>
               </div>
             </div>
