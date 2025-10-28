@@ -50,6 +50,19 @@ export default function Solutions(props) {
           lifespan: '8+年'
         }
       }, {
+        id: 'flexible-charging',
+        title: '柔性超充系统',
+        subtitle: 'MW级大功率快速补能解决方案',
+        description: '直流液冷，全柔性分配架构，支持光储直连，为大电量电池系统实现快速补能。',
+        features: ['MW级超充', '全柔性分配', '全液冷', '适应多种充电标准'],
+        icon: 'Zap',
+        color: '#0D7E9C',
+        stats: {
+          power: '2400kW',
+          efficiency: '96%',
+          flexibility: '100%'
+        }
+      }, {
         id: 'smart-control',
         title: '智能控制系统',
         subtitle: 'AI驱动的能源优化管理',
@@ -125,6 +138,19 @@ export default function Solutions(props) {
           capacity: '2400kWh',
           flexibility: '95%',
           lifespan: '8+ years'
+        }
+      }, {
+        id: 'flexible-charging',
+        title: 'Flexible Ultra-Fast Charging System',
+        subtitle: 'MW-level high-power rapid energy replenishment solution',
+        description: 'DC liquid cooling, fully flexible distribution architecture, supports direct PV-storage connection, achieving rapid energy replenishment for large-capacity battery systems.',
+        features: ['MW-level ultra-fast charging', 'Fully flexible distribution', 'Full liquid cooling', 'Adaptable to multiple charging standards'],
+        icon: 'Zap',
+        color: '#0D7E9C',
+        stats: {
+          power: '2400kW',
+          efficiency: '96%',
+          flexibility: '100%'
         }
       }, {
         id: 'smart-control',
@@ -254,7 +280,7 @@ export default function Solutions(props) {
           </div>
 
           {/* Desktop: Grid Layout */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-8">
+          <div className="hidden lg:grid lg:grid-cols-2 gap-8">
             {t.solutions.map((solution, index) => {
             const IconComponent = solution.icon === 'Zap' ? Zap : solution.icon === 'Battery' ? Battery : solution.icon === 'TrendingUp' ? TrendingUp : Shield;
             return <div key={solution.id} className={`group relative cursor-pointer transition-all duration-500 ${selectedSolution === solution.id ? 'scale-105' : ''}`} onClick={() => handleSolutionSelect(solution.id)}>
